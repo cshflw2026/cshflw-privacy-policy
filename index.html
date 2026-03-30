@@ -1,97 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capora — Privacy Policy</title>
-<style>
-  :root{--bg:#080C14;--bg2:#111827;--t1:#F1F5F9;--t2:#CBD5E1;--t3:#64748B;--acc:#A855F7;--bdr:rgba(255,255,255,.08);}
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{background:var(--bg);color:var(--t2);font-family:'Urbanist',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7;padding:24px 20px 60px;max-width:640px;margin:0 auto;}
-  @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap');
-  h1{font-size:1.6rem;font-weight:800;color:var(--t1);margin-bottom:6px;letter-spacing:-.5px;}
-  .subtitle{font-size:.78rem;color:var(--t3);margin-bottom:32px;}
-  h2{font-size:1rem;font-weight:800;color:var(--t1);margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--bdr);}
-  p{margin-bottom:12px;font-size:.88rem;}
-  ul{padding-left:20px;margin-bottom:12px;}
-  li{margin-bottom:6px;font-size:.88rem;}
-  a{color:var(--acc);text-decoration:none;}
-  a:hover{text-decoration:underline;}
-  .highlight{background:var(--bg2);border:1px solid var(--bdr);border-radius:10px;padding:14px 16px;margin:16px 0;font-size:.85rem;line-height:1.6;}
-  .highlight strong{color:var(--t1);}
-  .footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--bdr);font-size:.75rem;color:var(--t3);text-align:center;}
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Capora — Privacy Policy</title>
+    <style>
+      :root {
+        --bg: #0b0a12;
+        --card: rgba(255, 255, 255, 0.06);
+        --bdr: rgba(255, 255, 255, 0.12);
+        --txt: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.70);
+        --link: #a78bfa;
+        --maxw: 860px;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #fbfbff;
+          --card: rgba(0, 0, 0, 0.04);
+          --bdr: rgba(0, 0, 0, 0.10);
+          --txt: rgba(0, 0, 0, 0.90);
+          --muted: rgba(0, 0, 0, 0.65);
+          --link: #6d28d9;
+        }
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--txt);
+        font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          "Apple Color Emoji", "Segoe UI Emoji";
+      }
+      main {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 28px 16px 48px;
+      }
+      header {
+        border: 1px solid var(--bdr);
+        background: var(--card);
+        border-radius: 14px;
+        padding: 18px 18px 14px;
+        margin: 8px 0 18px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 1.2;
+        margin: 0 0 8px;
+        letter-spacing: -0.02em;
+      }
+      .meta {
+        color: var(--muted);
+        margin: 0;
+      }
+      .pill {
+        display: inline-block;
+        border: 1px solid var(--bdr);
+        border-radius: 999px;
+        padding: 2px 10px;
+        margin-right: 8px;
+        font-size: 12px;
+        color: var(--muted);
+        vertical-align: 1px;
+      }
+      section {
+        border: 1px solid var(--bdr);
+        background: var(--card);
+        border-radius: 14px;
+        padding: 18px;
+        margin: 12px 0;
+      }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+      }
+      h3 {
+        margin: 14px 0 8px;
+        font-size: 15px;
+      }
+      p {
+        margin: 10px 0;
+      }
+      ul {
+        margin: 10px 0;
+        padding-left: 18px;
+      }
+      li {
+        margin: 6px 0;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover,
+      a:focus-visible {
+        text-decoration: underline;
+      }
+      footer {
+        color: var(--muted);
+        text-align: center;
+        margin-top: 18px;
+        font-size: 13px;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="pill">Capora</div>
+        <div class="pill">Privacy Policy</div>
+        <h1>Privacy Policy</h1>
+        <p class="meta">
+          <strong>Capora — Personal Finance App</strong> ·
+          <strong>Last updated:</strong> March 30, 2026
+        </p>
+        <p class="meta">
+          <strong>In short:</strong> Capora does not sell your data. By default,
+          your finance data stays on your device. <strong>Cloud Sync is optional</strong>—if
+          you enable it, your data is processed and stored by
+          <strong>Google Firebase</strong> so synchronization can work.
+        </p>
+      </header>
 
-<h1>Privacy Policy</h1>
-<p class="subtitle">Capora — Personal Finance App · Last updated: March 29, 2026</p>
+      <section>
+        <h2>1. What Data We Collect</h2>
+        <p>Capora stores the data you manually enter, such as:</p>
+        <ul>
+          <li>Transactions (amount, description, category, date)</li>
+          <li>Recurring expenses and income</li>
+          <li>Savings goals / jars</li>
+          <li>App settings (starting balance, budgets, notification preferences, etc.)</li>
+        </ul>
+        <p>
+          Capora does <strong>not</strong> use analytics or advertising trackers.
+          We do <strong>not</strong> collect location data and we do not access
+          contacts, SMS, camera, microphone, or similar device sensors.
+        </p>
 
-<div class="highlight">
-  <strong>In short:</strong> Capora does not sell, share, or analyze your financial data. All data stays on your device. Cloud sync is optional and entirely under your control.
-</div>
+        <h3>Notifications</h3>
+        <p>
+          If you enable reminders, Capora may request the Android
+          <strong>Notifications</strong> permission. Notification scheduling is
+          performed by the app on your device. We do not receive your notification
+          content.
+        </p>
 
-<h2>1. What Data We Collect</h2>
-<p>Capora stores the following data that you enter manually:</p>
-<ul>
-  <li>Transactions (amount, description, category, date)</li>
-  <li>Recurring expenses and income</li>
-  <li>Savings goals (jars)</li>
-  <li>App settings (starting balance, planned income, budgets)</li>
-</ul>
-<p>Capora does <strong>not</strong> automatically collect any data. There is no analytics, no location tracking, no access to contacts, SMS, camera, or any other device sensors.</p>
+        <h3>Household / Shared data (only if you use it)</h3>
+        <p>
+          If you use any “household”, “sharing”, or similar collaboration feature,
+          the data you choose to sync/share can be visible to the other members you
+          add or invite. Only invite people you trust.
+        </p>
+      </section>
 
-<h2>2. Where Data Is Stored</h2>
-<p><strong>Locally on your device.</strong> All data is primarily stored in the app's local storage (localStorage) on your Android device. This data never leaves your device unless you explicitly enable Cloud Sync.</p>
+      <section>
+        <h2>2. Where Data Is Stored</h2>
 
-<h2>3. Cloud Sync (Optional)</h2>
-<p>If you choose to enable synchronization, your data is stored on Firebase Firestore (Google Cloud infrastructure) under a unique user ID.</p>
-<ul>
-  <li><strong>Anonymous sync</strong> — data is synchronized without any personal information. No name, email, or other identifiers are stored.</li>
-  <li><strong>Google Account sync</strong> — if you connect a Google account, your email address is stored solely for authentication purposes. Your email is never used for marketing or shared with third parties.</li>
-</ul>
-<p>You can disconnect your Google account and delete all cloud data at any time through the app settings or by contacting the developer.</p>
+        <h3>Local (default)</h3>
+        <p>
+          Your data is primarily stored <strong>locally on your Android device</strong>
+          (app local storage). This data does not leave your device unless you enable
+          Cloud Sync.
+        </p>
+        <p>
+          <strong>Note about device backups:</strong> Depending on your Android/Google
+          backup settings, app data may be included in system backups that are managed
+          by your device/Google account.
+        </p>
 
-<h2>4. Third-Party Data Sharing</h2>
-<p>Capora does <strong>not share data with any third parties</strong>. We do not use:</p>
-<ul>
-  <li>Analytics tools (Google Analytics, Firebase Analytics, Crashlytics)</li>
-  <li>Advertising networks</li>
-  <li>User tracking tools</li>
-  <li>External APIs that access user data</li>
-</ul>
+        <h3>Cloud Sync (optional)</h3>
+        <p>
+          If you enable synchronization, your data is stored in
+          <strong>Firebase (Google Cloud)</strong>:
+        </p>
+        <ul>
+          <li><strong>Firebase Firestore</strong> (for synced app data)</li>
+          <li><strong>Firebase Authentication</strong> (to identify your sync account)</li>
+        </ul>
+        <p>
+          When using Cloud Sync, Google/Firebase may process
+          <strong>technical information</strong> necessary to provide the service
+          (e.g., IP address and standard service logs).
+        </p>
+      </section>
 
-<h2>5. Data Security</h2>
-<ul>
-  <li>Local data is protected by Android operating system security mechanisms.</li>
-  <li>Cloud data is protected by Firebase Security Rules — each user can only access their own data.</li>
-  <li>All communication with Firebase services uses HTTPS encryption.</li>
-  <li>The app does not store passwords, card numbers, IBANs, or other sensitive financial identifiers.</li>
-</ul>
+      <section>
+        <h2>3. Cloud Sync Options</h2>
+        <ul>
+          <li><strong>Anonymous sync:</strong> synchronization without a personal profile inside the app.</li>
+          <li>
+            <strong>Google Account sync:</strong> if you connect Google Sign‑In, your
+            Google account identifier (such as email) may be processed by Firebase
+            Authentication for login purposes. It is <strong>not</strong> used for
+            marketing.
+          </li>
+        </ul>
+        <p>
+          You can disable Cloud Sync and delete cloud data via the app (when
+          available) or by contacting the developer.
+        </p>
+      </section>
 
-<h2>6. Your Rights</h2>
-<p>As a user, you have the right to:</p>
-<ul>
-  <li><strong>View</strong> all your data — it is visible within the app.</li>
-  <li><strong>Export</strong> your data in JSON or CSV format using the Export option in the app.</li>
-  <li><strong>Delete</strong> all your data using the Reset option in Settings.</li>
-  <li><strong>Disconnect</strong> Cloud Sync and request deletion of cloud data.</li>
-</ul>
-<p>To delete cloud data or for any questions, contact us at the email below.</p>
+      <section>
+        <h2>4. Third Parties</h2>
+        <p>Capora does not sell your personal data and does not use advertising networks.</p>
+        <p><strong>Service providers (only when needed for features you enable):</strong></p>
+        <ul>
+          <li><strong>Google Firebase (Auth / Firestore)</strong> for optional Cloud Sync.</li>
+        </ul>
+        <p>We do not use:</p>
+        <ul>
+          <li>Analytics (including Google Analytics / Firebase Analytics)</li>
+          <li>Crash reporting (including Crashlytics)</li>
+          <li>Advertising SDKs</li>
+          <li>Data brokers</li>
+        </ul>
+      </section>
 
-<h2>7. Children</h2>
-<p>Capora is not intended for children under the age of 13. We do not knowingly collect data from children.</p>
+      <section>
+        <h2>5. Data Security</h2>
+        <ul>
+          <li>Local data is protected by Android operating system mechanisms.</li>
+          <li>
+            Cloud data (if enabled) is protected by Firebase Security Rules designed
+            to restrict access to authorized users only.
+          </li>
+          <li>Communication with Firebase services uses HTTPS encryption.</li>
+          <li>
+            Capora does not store passwords, card numbers, IBANs, or similar sensitive
+            banking identifiers.
+          </li>
+        </ul>
+        <p>
+          If the app includes an app lock / PIN feature, the app stores only a
+          verification value (e.g., a hash) locally—not the raw PIN.
+        </p>
+      </section>
 
-<h2>8. Changes to This Policy</h2>
-<p>We reserve the right to update this policy. Changes will be posted on this page with an updated date. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+      <section>
+        <h2>6. Your Rights and Controls</h2>
+        <p>You can:</p>
+        <ul>
+          <li>View your data inside the app</li>
+          <li>Export your data (e.g., JSON/CSV, if the feature is available in your build)</li>
+          <li>Delete local app data (Reset)</li>
+          <li>Enable/disable Cloud Sync</li>
+          <li>Request deletion of cloud data</li>
+        </ul>
+        <p>For deletion requests or privacy questions, contact the developer.</p>
+      </section>
 
-<h2>9. Contact</h2>
-<p>For privacy questions or data deletion requests:</p>
-<p><strong>Email:</strong> <a href="mailto:cshflw2026@gmail.com">cshflw2026@gmail.com</a></p>
+      <section>
+        <h2>7. Children</h2>
+        <p>
+          Capora is not intended for children under the age of 13, and we do not knowingly
+          collect data from children.
+        </p>
+      </section>
 
-<div class="footer">
-  CFApp &copy; 2026 &middot; All rights reserved
-</div>
+      <section>
+        <h2>8. Changes to This Policy</h2>
+        <p>
+          We may update this policy from time to time. Changes will be posted on this
+          page with an updated date. Continued use of the app after changes means you
+          accept the updated policy.
+        </p>
+      </section>
 
-</body>
+      <section>
+        <h2>9. Contact</h2>
+        <p>For privacy questions or cloud data deletion requests:</p>
+        <p><strong>Email:</strong> <a href="mailto:cshflw2026@gmail.com">cshflw2026@gmail.com</a></p>
+      </section>
+
+      <footer>CFApp © 2026 · All rights reserved</footer>
+    </main>
+  </body>
 </html>
