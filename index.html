@@ -127,9 +127,9 @@
         </p>
         <p class="meta">
           <strong>In short:</strong> Capora does not sell your data. By default,
-          your finance data stays on your device. <strong>Cloud Sync is optional</strong>—if
-          you enable it, your data is processed and stored by
-          <strong>Google Firebase</strong> so synchronization can work.
+          your finance data stays on your device. <strong>Cloud Sync is OFF by default</strong>
+          and is only used if you explicitly enable it in Settings. If you enable Cloud Sync,
+          your data is processed and stored by <strong>Google Firebase</strong> so synchronization can work.
         </p>
       </header>
 
@@ -181,8 +181,8 @@
 
         <h3>Cloud Sync (optional)</h3>
         <p>
-          If you enable synchronization, your data is stored in
-          <strong>Firebase (Google Cloud)</strong>:
+          <strong>Cloud Sync is disabled by default.</strong> If you explicitly enable synchronization in
+          Settings, your data is stored in <strong>Firebase (Google Cloud)</strong>:
         </p>
         <ul>
           <li><strong>Firebase Firestore</strong> (for synced app data)</li>
@@ -197,6 +197,10 @@
 
       <section>
         <h2>3. Cloud Sync Options</h2>
+        <p>
+          Cloud Sync is only activated after you explicitly enable it in Settings. When Cloud Sync is off,
+          Capora does not connect to Firebase for synchronization.
+        </p>
         <ul>
           <li><strong>Anonymous sync:</strong> synchronization without a personal profile inside the app.</li>
           <li>
