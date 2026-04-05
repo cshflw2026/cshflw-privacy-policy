@@ -123,169 +123,317 @@
         <h1>Privacy Policy</h1>
         <p class="meta">
           <strong>Capora — Personal Finance App</strong> ·
-          <strong>Last updated:</strong> March 30, 2026
+          <strong>Last updated:</strong> April 5, 2026
         </p>
         <p class="meta">
           <strong>In short:</strong> Capora does not sell your data. By default,
           your finance data stays on your device. <strong>Cloud Sync is OFF by default</strong>
-          and is only used if you explicitly enable it in Settings. If you enable Cloud Sync,
-          your data is processed and stored by <strong>Google Firebase</strong> so synchronization can work.
+          and is only used if you explicitly enable it in Settings. Cloud Sync requires
+          a <strong>Google account</strong>. If you enable Cloud Sync, your data is
+          processed and stored by <strong>Google Firebase</strong> so synchronization
+          can work across your devices.
         </p>
       </header>
 
       <section>
-        <h2>1. What Data We Collect</h2>
-        <p>Capora stores the data you manually enter, such as:</p>
+        <h2>1. Who We Are</h2>
+        <p>
+          Capora is a personal finance application developed as an independent project.
+          For the purposes of this policy, "we", "us", and "our" refer to the developer
+          of Capora. For any privacy-related inquiries, contact us at
+          <a href="mailto:cshflw2026@gmail.com">cshflw2026@gmail.com</a>.
+        </p>
+        <p>
+          This policy applies to the Capora Android application and any associated
+          web-based interfaces.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. What Data We Collect</h2>
+
+        <h3>Data you enter into the app</h3>
+        <p>Capora stores only the financial data you manually input:</p>
         <ul>
-          <li>Transactions (amount, description, category, date)</li>
-          <li>Recurring expenses and income</li>
-          <li>Savings goals / jars</li>
-          <li>App settings (starting balance, budgets, notification preferences, etc.)</li>
+          <li>Transactions (amount, description, category, date, type)</li>
+          <li>Recurring expenses and income (templates, frequency, amounts)</li>
+          <li>Savings goals and jar contributions</li>
+          <li>Budget limits per category</li>
+          <li>App settings (starting balance, preferred currency, language,
+            notification preferences)</li>
+          <li>Financial scenarios you create</li>
         </ul>
         <p>
           Capora does <strong>not</strong> use analytics or advertising trackers.
-          We do <strong>not</strong> collect location data and we do not access
-          contacts, SMS, camera, microphone, or similar device sensors.
+          We do <strong>not</strong> collect location data, contacts, call history,
+          SMS content, camera, microphone, or similar device sensors.
+          We do <strong>not</strong> collect device identifiers (IMEI, advertising ID).
         </p>
 
-        <h3>Notifications</h3>
+        <h3>Data collected when Cloud Sync is enabled</h3>
         <p>
-          If you enable reminders, Capora may request the Android
-          <strong>Notifications</strong> permission. Notification scheduling is
-          performed by the app on your device. We do not receive your notification
-          content.
+          If you enable Cloud Sync, the following is additionally processed by Firebase:
         </p>
+        <ul>
+          <li>Your <strong>Google account email address</strong> and Firebase user ID
+            (used solely to identify your sync account)</li>
+          <li>All app data listed above, uploaded to your private Firestore document</li>
+          <li>Standard server-side technical logs maintained by Google
+            (IP address, request timestamps, Firebase SDK version) — these are managed
+            by Google under its own privacy policy and are not accessible to us</li>
+          <li>A <strong>last-sync timestamp</strong> stored in Firestore</li>
+        </ul>
 
         <h3>Household / Shared data (only if you use it)</h3>
         <p>
-          If you use any “household”, “sharing”, or similar collaboration feature,
-          the data you choose to sync/share can be visible to the other members you
-          add or invite. Only invite people you trust.
+          The Household feature allows you to share your financial data with another
+          person (e.g. a partner or family member). If you use this feature:
+        </p>
+        <ul>
+          <li>All household members can read and write the shared financial data</li>
+          <li>Household data is stored in a separate Firestore document accessible
+            to all members you invite</li>
+          <li>Only invite people you trust — shared data includes your full transaction
+            history, templates, budgets, and savings</li>
+          <li>You can leave a household at any time; the app will fork a private copy
+            of the data for your own use</li>
+        </ul>
+
+        <h3>Notifications</h3>
+        <p>
+          If you enable reminders, Capora requests the Android
+          <strong>POST_NOTIFICATIONS</strong> permission. Notification scheduling is
+          performed locally on your device using the Capacitor Local Notifications plugin.
+          Notification content is never transmitted to any server.
         </p>
       </section>
 
       <section>
-        <h2>2. Where Data Is Stored</h2>
+        <h2>3. Where Data Is Stored</h2>
 
-        <h3>Local (default)</h3>
+        <h3>Local storage (always, regardless of Cloud Sync)</h3>
         <p>
           Your data is primarily stored <strong>locally on your Android device</strong>
-          (app local storage). This data does not leave your device unless you enable
-          Cloud Sync.
+          using the WebView's local storage (key prefix <code>cf4_</code>). This data
+          does not leave your device unless you explicitly enable Cloud Sync.
         </p>
         <p>
-          <strong>Note about device backups:</strong> Depending on your Android/Google
-          backup settings, app data may be included in system backups that are managed
-          by your device/Google account.
+          <strong>Note about device backups:</strong> Depending on your Android and Google
+          account backup settings, app data may be included in Android system backups
+          managed by your device or Google. This is controlled by your OS settings, not
+          by Capora.
         </p>
 
-        <h3>Cloud Sync (optional)</h3>
+        <h3>Cloud Sync (optional, Google account required)</h3>
         <p>
-          <strong>Cloud Sync is disabled by default.</strong> If you explicitly enable synchronization in
-          Settings, your data is stored in <strong>Firebase (Google Cloud)</strong>:
+          <strong>Cloud Sync is disabled by default.</strong> When you explicitly enable
+          it in Settings, you will be prompted to sign in with a Google account. Once
+          enabled, your data is stored in <strong>Google Firebase</strong>:
         </p>
         <ul>
-          <li><strong>Firebase Firestore</strong> (for synced app data)</li>
-          <li><strong>Firebase Authentication</strong> (to identify your sync account)</li>
-        </ul>
-        <p>
-          When using Cloud Sync, Google/Firebase may process
-          <strong>technical information</strong> necessary to provide the service
-          (e.g., IP address and standard service logs).
-        </p>
-      </section>
-
-      <section>
-        <h2>3. Cloud Sync Options</h2>
-        <p>
-          Cloud Sync is only activated after you explicitly enable it in Settings. When Cloud Sync is off,
-          Capora does not connect to Firebase for synchronization.
-        </p>
-        <ul>
-          <li><strong>Anonymous sync:</strong> synchronization without a personal profile inside the app.</li>
           <li>
-            <strong>Google Account sync:</strong> if you connect Google Sign‑In, your
-            Google account identifier (such as email) may be processed by Firebase
-            Authentication for login purposes. It is <strong>not</strong> used for
-            marketing.
+            <strong>Firebase Firestore</strong> — stores your financial data in a
+            private document at <code>users/{your-firebase-uid}/cashflow/data</code>,
+            or in a household document at <code>households/{householdId}</code>
+            if you use the Household feature
+          </li>
+          <li>
+            <strong>Firebase Authentication</strong> — stores your Google sign-in
+            session to authenticate data access
           </li>
         </ul>
         <p>
-          You can disable Cloud Sync and delete cloud data via the app (when
-          available) or by contacting the developer.
+          Firebase data is hosted on Google Cloud infrastructure. Data may be stored in
+          data centers outside your country of residence, including the United States.
+          Google LLC is certified under the EU–U.S. Data Privacy Framework, providing
+          an adequate level of protection for transfers from the European Economic Area.
         </p>
       </section>
 
       <section>
-        <h2>4. Third Parties</h2>
-        <p>Capora does not sell your personal data and does not use advertising networks.</p>
-        <p><strong>Service providers (only when needed for features you enable):</strong></p>
+        <h2>4. Legal Basis for Processing (GDPR)</h2>
+        <p>
+          If you are located in the European Economic Area (EEA), our legal bases for
+          processing your data are:
+        </p>
         <ul>
-          <li><strong>Google Firebase (Auth / Firestore)</strong> for optional Cloud Sync.</li>
+          <li>
+            <strong>Performance of a contract / provision of service (Art. 6(1)(b) GDPR):</strong>
+            Processing of locally stored data is necessary to provide app functionality
+            (calculating balances, displaying transactions, etc.).
+          </li>
+          <li>
+            <strong>Consent (Art. 6(1)(a) GDPR):</strong>
+            Cloud Sync and Google Sign-In are entirely optional. By enabling Cloud Sync
+            and signing in with your Google account, you give explicit consent for your
+            data to be uploaded to Firebase. You may withdraw this consent at any time
+            by disabling Cloud Sync in Settings.
+          </li>
+          <li>
+            <strong>Legitimate interests (Art. 6(1)(f) GDPR):</strong>
+            Technical logging by Google Firebase (IP addresses, request logs) may be
+            processed on the basis of legitimate interests in providing reliable
+            infrastructure. These logs are governed by Google's own privacy policy.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Third Parties</h2>
+        <p>Capora does not sell your personal data and does not use advertising networks.</p>
+        <p><strong>Service providers used only when you enable the relevant feature:</strong></p>
+        <ul>
+          <li>
+            <strong>Google Firebase (Firestore + Authentication)</strong> — for optional
+            Cloud Sync. Governed by
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
+              Google Firebase Privacy Policy</a>.
+          </li>
+          <li>
+            <strong>Google Sign-In</strong> — used to authenticate your identity for
+            Cloud Sync. Governed by
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+              Google Privacy Policy</a>.
+          </li>
         </ul>
         <p>We do not use:</p>
         <ul>
-          <li>Analytics (including Google Analytics / Firebase Analytics)</li>
-          <li>Crash reporting (including Crashlytics)</li>
-          <li>Advertising SDKs</li>
-          <li>Data brokers</li>
+          <li>Crash reporting (including Crashlytics / Sentry)</li>
+          <li>Advertising SDKs or ad networks</li>
+          <li>Social media SDKs (Facebook, Twitter/X, TikTok, etc.)</li>
+          <li>Data brokers or data enrichment services</li>
         </ul>
       </section>
 
       <section>
-        <h2>5. Data Security</h2>
+        <h2>6. Data Security</h2>
         <ul>
-          <li>Local data is protected by Android operating system mechanisms.</li>
+          <li>Local data is protected by Android operating system sandboxing mechanisms.</li>
           <li>
-            Cloud data (if enabled) is protected by Firebase Security Rules designed
-            to restrict access to authorized users only.
+            Cloud data is protected by <strong>Firebase Security Rules</strong> that
+            restrict Firestore document access to the authenticated owner's Firebase UID,
+            and household documents to verified household members only.
           </li>
-          <li>Communication with Firebase services uses HTTPS encryption.</li>
+          <li>All communication with Firebase services uses <strong>HTTPS/TLS encryption</strong>.</li>
           <li>
-            Capora does not store passwords, card numbers, IBANs, or similar sensitive
-            banking identifiers.
+            Capora does not store passwords, card numbers, IBANs, account numbers,
+            PINs (raw), or similar sensitive banking credentials.
+          </li>
+          <li>
+            The in-app PIN lock stores only a verification value (hash) locally —
+            the raw PIN is never stored or transmitted.
           </li>
         </ul>
         <p>
-          If the app includes an app lock / PIN feature, the app stores only a
-          verification value (e.g., a hash) locally—not the raw PIN.
+          Despite these measures, no system is 100% secure. We recommend using a
+          strong Google account password and enabling 2-factor authentication on your
+          Google account.
         </p>
       </section>
 
       <section>
-        <h2>6. Your Rights and Controls</h2>
-        <p>You can:</p>
-        <ul>
-          <li>View your data inside the app</li>
-          <li>Export your data (e.g., JSON/CSV, if the feature is available in your build)</li>
-          <li>Delete local app data (Reset)</li>
-          <li>Enable/disable Cloud Sync</li>
-          <li>Request deletion of cloud data</li>
-        </ul>
-        <p>For deletion requests or privacy questions, contact the developer.</p>
-      </section>
+        <h2>7. Data Retention</h2>
 
-      <section>
-        <h2>7. Children</h2>
+        <h3>Local data</h3>
         <p>
-          Capora is not intended for children under the age of 13, and we do not knowingly
-          collect data from children.
+          Local data is retained on your device until you delete it via the app's
+          Reset function, or until you uninstall the app. Uninstalling the app
+          removes all local data.
+        </p>
+
+        <h3>Cloud data (if Cloud Sync was enabled)</h3>
+        <p>
+          Cloud data in Firebase Firestore is retained as long as your account is
+          active or until you request deletion. Disabling Cloud Sync in the app
+          stops future synchronization but does <strong>not</strong> automatically
+          delete data already stored in Firebase.
+        </p>
+        <p>
+          To permanently delete your cloud data, contact us at
+          <a href="mailto:cshflw2026@gmail.com">cshflw2026@gmail.com</a>
+          with the email address of the Google account you used. We will process
+          deletion requests within 30 days.
+        </p>
+
+        <h3>Firebase Authentication session data</h3>
+        <p>
+          Firebase Authentication session tokens are managed by Google and expire
+          according to Google's standard token lifecycle. Signing out of Google
+          account in the app terminates the active session.
         </p>
       </section>
 
       <section>
-        <h2>8. Changes to This Policy</h2>
+        <h2>8. Your Rights and Controls</h2>
+        <p>
+          Depending on your jurisdiction (including under GDPR for EEA residents),
+          you may have the following rights regarding your personal data:
+        </p>
+        <ul>
+          <li><strong>Right of access:</strong> You can view all your data inside the app at any time.</li>
+          <li>
+            <strong>Right to data portability:</strong> You can export your data
+            (JSON format) using the Export feature in the app drawer, if available in
+            your build.
+          </li>
+          <li>
+            <strong>Right to rectification:</strong> You can edit or correct any
+            transaction, template, or setting directly in the app.
+          </li>
+          <li>
+            <strong>Right to erasure ("right to be forgotten"):</strong>
+            You can delete local data via the Reset function in Settings. For cloud data
+            deletion, contact us at
+            <a href="mailto:cshflw2026@gmail.com">cshflw2026@gmail.com</a>.
+          </li>
+          <li>
+            <strong>Right to withdraw consent:</strong> You can disable Cloud Sync
+            at any time in Settings &gt; Cloud Sync &gt; Disconnect Google Account.
+            This stops all future synchronization.
+          </li>
+          <li>
+            <strong>Right to object / restrict processing:</strong>
+            Contact us at <a href="mailto:cshflw2026@gmail.com">cshflw2026@gmail.com</a>
+            to exercise these rights.
+          </li>
+        </ul>
+        <p>
+          If you believe your rights have not been respected, you have the right to lodge
+          a complaint with your local data protection supervisory authority.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Children</h2>
+        <p>
+          Capora is not intended for children under the age of 13 (or 16 where
+          required by applicable law), and we do not knowingly collect personal data
+          from children. If you believe a child has provided personal data through
+          the app, contact us so we can take appropriate action.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Changes to This Policy</h2>
         <p>
           We may update this policy from time to time. Changes will be posted on this
-          page with an updated date. Continued use of the app after changes means you
-          accept the updated policy.
+          page with an updated date. For significant changes, we will make reasonable
+          efforts to notify users (e.g., via an in-app notice). Continued use of the
+          app after changes means you accept the updated policy.
+        </p>
+        <p>
+          Previous versions of this policy can be requested by contacting us at
+          <a href="mailto:cshflw2026@gmail.com">cshflw2026@gmail.com</a>.
         </p>
       </section>
 
       <section>
-        <h2>9. Contact</h2>
-        <p>For privacy questions or cloud data deletion requests:</p>
+        <h2>11. Contact</h2>
+        <p>For privacy questions, data deletion requests, or to exercise your rights:</p>
         <p><strong>Email:</strong> <a href="mailto:cshflw2026@gmail.com">cshflw2026@gmail.com</a></p>
+        <p>
+          We aim to respond to all privacy-related requests within <strong>30 days</strong>.
+        </p>
       </section>
 
       <footer>CFApp © 2026 · All rights reserved</footer>
